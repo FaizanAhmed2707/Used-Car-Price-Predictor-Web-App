@@ -1,3 +1,2 @@
-# System dependencies for deployment
 build-essential
 python3-dev 
