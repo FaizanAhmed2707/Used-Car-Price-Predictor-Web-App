@@ -25,12 +25,12 @@ def car_recommendation_system():
     
     # Your existing car recommendation code
     st.subheader("Enter Your Preferences")
+    preferred_brand = st.text_input('Preferred car brand (optional)')
     budget = st.number_input('Enter your budget (in Lakhs)', min_value=2.5, max_value=100.0, step=0.1)
     fuel_type = st.selectbox('Preferred fuel type', ('Petrol', 'Diesel', 'CNG'))
     transmission_type = st.selectbox('Preferred transmission type', ('Manual', 'Automatic'))
     car_age = st.slider('Maximum age of the car (years)', min_value=0, max_value=20)
     car_type = st.selectbox('Preferred car type', ('SUV', 'Sedan', 'Hatchback', 'Convertible', 'Coupe', 'Wagon', 'Van', 'Jeep'))
-    preferred_brand = st.text_input('Preferred car brand (optional)')
     min_mileage = st.number_input('Minimum mileage (km/l)', min_value=0, max_value=50, step=1)
     
     if st.button("Recommend Cars"):
