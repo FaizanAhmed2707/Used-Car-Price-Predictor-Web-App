@@ -45,8 +45,8 @@ def car_comparison_tool():
 
 def get_car_details(brand, model): 
     try:
-        prompt = f"Get details for the car brand: {brand} and model: {model}." 
-        response = genai.GenerativeModel("models/gemini-1.5-flash").generate_content(prompt) 
+        prompt = f"Get details for the car brand: {brand} and model: {model}, the region is India-specific unless the model and brand is not released in india." 
+        response = genai.GenerativeModel("models/gemini-2.5-flash").generate_content(prompt) 
         return response.text
     except Exception as e:
         if "quota" in str(e).lower() or "429" in str(e):
